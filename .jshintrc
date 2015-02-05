@@ -25,6 +25,8 @@
   "indent": 2,
   "maxlen": 120,
 
+  "freeze": false,
+
   "globals": {
     "define": true,
     "require": true,
