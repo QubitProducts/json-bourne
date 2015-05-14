@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/qubitdigital/json-bourne.git"
+    "url": "https://github.com/qubitproducts/json-bourne.git"
   },
   "author": "Robert Tod <roberttod@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/qubitdigital/json-bourne/issues"
+    "url": "https://github.com/qubitproducts/json-bourne/issues"
   },
-  "homepage": "https://github.com/qubitdigital/json-bourne",
+  "homepage": "https://github.com/qubitproducts/json-bourne",
   "devDependencies": {
     "jscs": "^1.10.0",
     "jshint": "^2.6.0",
