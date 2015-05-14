@@ -1,5 +1,7 @@
 ![json-bourne](https://cloud.githubusercontent.com/assets/823104/6025028/5493ca12-abc7-11e4-9431-43a851bcb08b.jpg)
 
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
 Normalizes the JavaScript JSON API against overwritten `Array.prototype.toJSON` and IE8's unstandardized version of `Date.prototype.toJSON`.
 
 Advantages over [JSON 3](https://github.com/bestiejs/json3)
@@ -22,13 +24,13 @@ Usage
 JSON Bourne is a drop in replacement for JSON, replicating the standard `parse` and `stringify` methods exactly.
 
 ```javascript
-var JSON = require('json-bourne');
+var JSON = require('json-bourne')
 
-console.log(JSON.parse('{"bourne": "legacy"}'));
-// Logs {bourne: "legacy"}
+console.log(JSON.parse('{"bourne": "legacy"}'))
+// Logs { bourne: "legacy" }
 
-console.log(JSON.stringify({"bourne": "ultimatum"}));
-// Logs {"bourne":"ultimatum"}
+console.log(JSON.stringify({"bourne": "ultimatum"}))
+// Logs { "bourne": "ultimatum" }
 ```
 
 Compatibility

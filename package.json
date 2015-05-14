@@ -20,8 +20,6 @@
   },
   "homepage": "https://github.com/qubitproducts/json-bourne",
   "devDependencies": {
-    "jscs": "^1.10.0",
-    "jshint": "^2.6.0",
     "karma": "^0.12.31",
     "karma-browserify": "^3.0.1",
     "karma-chrome-launcher": "^0.1.7",
@@ -29,6 +27,7 @@
     "karma-mocha": "^0.1.10",
     "karma-spec-reporter": "0.0.16",
     "mocha": "^2.1.0",
-    "sinon": "^1.12.2"
+    "sinon": "^1.12.2",
+    "standard": "^3.8.0"
   }
 }

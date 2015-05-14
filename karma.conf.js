@@ -18,5 +18,5 @@ module.exports = function (config) {
     reporters: ['spec'],
     logLevel: config.LOG_INFO,
     browsers: ['Chrome']
-  });
-};
+  })
+}
