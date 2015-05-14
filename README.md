@@ -16,6 +16,12 @@ Known issues
 - Can be slower at stringifying on newer browsers (see [Benchmarks](#benchmarks))
 - Not compatible with IE7 or below
 
+Installation
+============
+```bash
+$ npm install --save json-bourne
+```
+
 Motivation
 ==========
 JSON Bourne is intended for use in code that you'll execute on websites you don't control. Such websites can break the native `JSON.stringify` implementation by changing `Array.prototype.toJSON`, specifically if they use prototype.js version 1.6 or under. JSON Bourne also normalizes `Date.prototype.toJSON`, correcting the unstandard implementation for IE8. Any changes to prototypes are restored immediately after stringifying.
