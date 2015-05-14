@@ -2,6 +2,8 @@
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
+[ ![Codeship Status for qubitproducts/json-bourne](https://codeship.com/projects/0d7fcc80-dc51-0132-9f1d-025863fcc952/status?branch=master)](https://codeship.com/projects/79926)
+
 Normalizes the JavaScript JSON API against overwritten `Array.prototype.toJSON` and IE8's unstandardized version of `Date.prototype.toJSON`.
 
 Advantages over [JSON 3](https://github.com/bestiejs/json3)
