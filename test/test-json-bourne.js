@@ -1,7 +1,7 @@
 /* global describe, it, expect, beforeEach, afterEach */
 /* eslint-disable no-extend-native */
 
-var jsonBourne = require('../json')
+var jsonBourne = require('../json-bourne')
 var sinon = require('sinon')
 
 describe('JSON', function () {

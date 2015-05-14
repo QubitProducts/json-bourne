@@ -2,7 +2,7 @@
   "name": "json-bourne",
   "version": "1.0.0",
   "description": "Drop in replacement for JSON that standardizes Array.toJSON and Date.toJSON",
-  "main": "json.js",
+  "main": "json-bourne.js",
   "directories": {
     "test": "test"
   },
