@@ -3,9 +3,15 @@
 
 var jsonBourne = {
   stringify: function stringify () {
+    var error, result
     var prototypes = normalizePrototypes()
-    var result = JSON.stringify.apply(JSON, arguments)
+    try {
+      result = JSON.stringify.apply(JSON, arguments)
+    } catch (e) {
+      error = e
+    }
     prototypes.restore()
+    if (error) throw error
     return result
   },
   parse: function parse () {
