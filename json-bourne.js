@@ -61,10 +61,10 @@ function toIsoDate (date) {
     pad(date.getUTCMilliseconds(), 3) + 'Z' : null
 }
 
-function pad (number) {
-  var r = String(number)
-  if (r.length === 1) {
-    r = '0' + r
+function pad (str, width) {
+  str = str + ''
+  if (str.length >= width) {
+    return str
   }
-  return r
+  return new Array(width - str.length + 1).join('0') + str
 }

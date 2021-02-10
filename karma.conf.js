@@ -1,22 +1,28 @@
 module.exports = function (config) {
   config.set({
     basePath: '',
-    frameworks: ['mocha', 'browserify', 'expect'],
+    frameworks: ['mocha', 'webpack', 'expect', 'sinon'],
     files: [
-      'test/*.js'
+      { pattern: 'test/**/*.js', watched: false }
     ],
     exclude: [
       'karma.conf.js'
     ],
+    plugins: [
+      'karma-webpack',
+      'karma-mocha',
+      'karma-expect',
+      'karma-sinon',
+      'karma-spec-reporter',
+      'karma-chrome-launcher'
+    ],
     preprocessors: {
-      'test/**/*.js': ['browserify'],
-      '*.js': ['browserify']
-    },
-    browserify: {
-      debug: true
+      'test/**/*.js': ['webpack'],
+      '*.js': ['webpack']
     },
     reporters: ['spec'],
     logLevel: config.LOG_INFO,
-    browsers: ['Chrome']
+    browsers: ['Chrome'],
+    webpack: {}
   })
 }

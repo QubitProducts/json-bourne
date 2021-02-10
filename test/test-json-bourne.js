@@ -1,8 +1,7 @@
-/* global describe, it, expect, beforeEach, afterEach */
+/* global describe, it, expect, beforeEach, afterEach, sinon */
 /* eslint-disable no-extend-native */
 
 var jsonBourne = require('../json-bourne')
-var sinon = require('sinon')
 
 describe('JSON', function () {
   describe('parse', function () {
@@ -29,7 +28,7 @@ describe('JSON', function () {
     })
 
     it('should parse stringified date in standard format', function () {
-      expect(jsonBourne.parse('{"d":\"1989-01-17T00:00:00.00Z\"}').d).to.be('1989-01-17T00:00:00.00Z')
+      expect(jsonBourne.parse('{"d":\"1989-01-17T00:00:00.000Z\"}').d).to.be('1989-01-17T00:00:00.000Z')
     })
   })
 
@@ -63,7 +62,7 @@ describe('JSON', function () {
     })
 
     it('should use the standard ISO date format', function () {
-      expect(jsonBourne.stringify(new Date('Jan 17 1989 GMT+0000'))).to.be('\"1989-01-17T00:00:00.00Z\"')
+      expect(jsonBourne.stringify(new Date('Jan 17 1989 GMT+0000'))).to.be('\"1989-01-17T00:00:00.000Z\"')
     })
 
     it('should not remove custom Array.prototype.toJSON', function () {
@@ -79,7 +78,7 @@ describe('JSON', function () {
       var toJSON = sinon.stub()
       Date.prototype.toJSON = toJSON
       expect(jsonBourne.stringify({ d: new Date('Jan 17 1989 GMT+0000') }))
-        .to.be('{"d":\"1989-01-17T00:00:00.00Z\"}')
+        .to.be('{"d":\"1989-01-17T00:00:00.000Z\"}')
       expect(toJSON.callCount).to.be(0)
       expect(Date.prototype.toJSON).to.be(toJSON)
       delete Date.prototype.toJSON
